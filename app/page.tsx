@@ -20,6 +20,7 @@ export default function Home() {
       }
     } catch (err) {
       console.log(err);
+      setAbilities([]);
     } finally {
       setLoading(false);
     }
@@ -42,10 +43,18 @@ export default function Home() {
         {loading ? '...Loading' : 'Search'}
       </button>
       <br />
-      {loading && <span className="loading loading-dots loading-lg"></span>}
-      {!loading && abilities.length > 0 && (
-        <AbilitiesTable abilities={abilities} />
+      {loading ? (
+        <>
+          <span className="loading loading-dots loading-lg"></span>
+          <br />
+        </>
+      ) : (
+        (abilities.length > 0) ? (
+          <AbilitiesTable abilities={abilities} />
+        ) : (
+          <span>No abilities to show :(</span>
+        )
       )}
-    </div>
+    </div >
   );
 }
