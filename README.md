@@ -6,6 +6,11 @@ Made with **NextJS** with **DaisyUI** framework.
 
 Just search for the Pokemon name to get its ability :)
 
+## Pre-requisites
+- Node Installed.
+
+To install, follow the official website: https://nodejs.org/en/download
+
 ## Running
 #### Locally
 First, install dependencies:.
